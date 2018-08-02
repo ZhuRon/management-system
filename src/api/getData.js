@@ -13,3 +13,7 @@ export const getCaptchChas = () => new Promise((resolve, reject) => {
     .then(data => resolve(data))
     .catch(err => reject(err))
 })
+export const getStore = name => { if (!name) return; return window.localStorage.getItem(name) }
+export const accountLogin = (username, password) => fetch('/v2/login', {username, password}, 'POST')
+export const getcaptchas = () => fetch('/v1/captchas', {}, 'POST')
+export const getUser = () => fetch('/v1/user', {user_id: getStore('user_id')})

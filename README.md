@@ -24,3 +24,6 @@ For a detailed explanation on how things work, check out the [guide](http://vuej
 
 # 记得做transition效果与slot
 # 记得做mocha
+# 登录界面效果
+@keyup.enter.native="handleLogin"属性，当按下enter键时会自动触发handleLogin函数，不需要再点击登录按钮，符合日常登录习惯。
+当输入账号密码点击登录按钮会触发handleLogin函数。
