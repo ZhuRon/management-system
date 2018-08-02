@@ -1,15 +1,22 @@
 <template>
 
 <div>
-     <head-top head-title="三会一课"></head-top>
+     <Header :HeaderMes="HeaderMes"></Header>
 </div>
 </template>
 
 <script>
-import headTop from '../components/header'
+import Header from '@/components/header'
 export default {
   components: {
-    headTop
+    Header
+  },
+  data () {
+    return {
+      HeaderMes: {
+        title: '三会一课'
+      }
+    }
   }
 }
 </script>

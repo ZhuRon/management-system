@@ -1,13 +1,21 @@
 <template>
-    <div>message</div>
+    <div><Header :HeaderMes="HeaderMes"></Header></div>
 </template>
 
 <script>
+import Header from '@/components/header'
 // import {apiname} from '../api/getData.js'
 export default {
+  components: {
+    Header
+  },
   name: 'MC',
   data () {
-    return {}
+    return {
+      HeaderMes: {
+        title: '信息表'
+      }
+    }
   }
 }
 //  mounted () {
